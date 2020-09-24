@@ -1,0 +1,10 @@
+/* this. is used to prevent pages from taking extra width 
+and will used in every project so we don't need to add overfloiw hidden extra css */
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+}
