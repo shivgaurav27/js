@@ -4,7 +4,7 @@ const authorText = document.getElementById('author')
 const twitterBtn = document.getElementById('twitter')
 const newQuoteBtn = document.getElementById('new-quote')
 const loader = document.getElementById('loader')
-
+let errorCounter = 0;
 // show loading spinner
 
 function loading(){
@@ -47,8 +47,16 @@ async function getQuote(){
         // stop loader and show quote
         complete();
     } catch (error) {
-        getQuote();
+        console.log(error)
+        errorCounter +=1
+        if (errorCounter>=10) {
+            quoteText.innerText="There is something wrong with the page"
+            complete();
+        }else{
+          getQuote();
+        }
     }
+    console.log("error",errorCounter)
 }
 
 //  twitter function 
