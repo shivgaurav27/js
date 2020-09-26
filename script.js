@@ -50,7 +50,7 @@ async function getQuote(){
         console.log(error)
         errorCounter +=1
         if (errorCounter>=10) {
-            quoteText.innerText="There is something wrong with the page"
+            quoteText.innerText="There is something wrong with the page.Please try After sometime."
             complete();
         }else{
           getQuote();
