@@ -5,14 +5,14 @@ const twitterBtn = document.getElementById('twitter')
 const newQuoteBtn = document.getElementById('new-quote')
 const loader = document.getElementById('loader')
 
-// show loading
+// show loading spinner
 
 function loading(){
     loader.hidden = false;
     quoteConerator.hidden=true;
 }
 
-// hide loading 
+// hide loading spinner
 
 function complete(){
     if(!loader.hidden){
