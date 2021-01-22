@@ -32,3 +32,26 @@ var Todo = mongoose.model("Todo", {
 //     console.log("unable to save Todo", e);
 //   }
 // );
+
+var user = mongoose.model("User", {
+  email: {
+    type: String,
+    useNewUrlParser: true,
+    require: true,
+    trim: true,
+    minLength: 1,
+  },
+});
+
+var newUser = new user({
+  email: "shiv7727@gmail.com",
+});
+
+newUser.save().then(
+  (doc) => {
+    console.log("saved email", doc);
+  },
+  (e) => {
+    console.log("unable to save email", e);
+  }
+);
