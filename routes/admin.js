@@ -7,7 +7,7 @@ router.get("/addproduct", (req, res) => {
   //   '<form method="POST" action="/admin/addproduct"><input type="text" name="title"/> <button type="submit">submit</button></form>'
   // );
   // new way of setting path ".." instead of "../" working on both env
-  res.sendFile(path.join(__dirname, "..", "views", "addproduct.html"));
+  res.sendFile(path.join(__dirname, "../", "views", "AddProduct.html"));
 });
 
 router.post("/addproduct", (req, res) => {
