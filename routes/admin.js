@@ -1,18 +1,20 @@
-const express = require("express");
-const path = require("path");
+const path = require('path');
+
+const express = require('express');
+
+const rootDir = require('../util/path');
+
 const router = express.Router();
 
-router.get("/addproduct", (req, res) => {
-  // res.send(
-  //   '<form method="POST" action="/admin/addproduct"><input type="text" name="title"/> <button type="submit">submit</button></form>'
-  // );
-  // new way of setting path ".." instead of "../" working on both env
-  res.sendFile(path.join(__dirname, "../", "views", "AddProduct.html"));
+// /admin/add-product => GET
+router.get('/add-product', (req, res, next) => {
+  res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 });
 
-router.post("/addproduct", (req, res) => {
+// /admin/add-product => POST
+router.post('/add-product', (req, res, next) => {
   console.log(req.body);
-  res.redirect("/");
+  res.redirect('/');
 });
 
 module.exports = router;
