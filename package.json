@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shivgaurav7727/js/issues"
   },
-  "homepage": "https://github.com/shivgaurav7727/js#readme"
+  "homepage": "https://github.com/shivgaurav7727/js#readme",
+  "devDependencies": {
+    "eslint": "^7.18.0"
+  }
 }
