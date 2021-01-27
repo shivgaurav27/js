@@ -12,7 +12,7 @@ router.get("/", (req, res, next) => {
   const products = adminData.products;
   // res.sendFile(path.join(rootDir, "views", "shop.html"));
   // use template engine pug below to render shop page
-  res.render("shop", { prods: products, docTitle: "Shop", path: "/" });
+  res.render("shop", { prods: products, pageTitle: "Shop", path: "/" });
 });
 
 module.exports = router;
